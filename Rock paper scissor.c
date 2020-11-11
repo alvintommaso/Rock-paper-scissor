@@ -12,14 +12,14 @@
 #include <math.h>
 #include <stdlib.h>
 int main(){
-	printf("Whelcome in Rock paper scissor\n");
-	printf("0=Rock, 1=paper, 2=scissor \n");	//instructions
+	printf("Welcome in Rock paper scissors\n");
+	printf("0=Rock, 1=paper, 2=scissors \n");	//instructions
 	int pc=0;	//variables
 	int user=0;
 	int notError=0;
 	srand(time(NULL)); //set seed
 	pc=(rand()%3);	//decide the pc move
-	do{	//user friendli request of user move
+	do{	//user friendly request of user move
 		printf("Enter your move\n");
 		fflush(stdin);
 		notError=scanf("%d", &user);
@@ -36,7 +36,7 @@ int main(){
 	}else if(pc==1){
 		printf("paper\n");
 	}else{
-		printf("scissor\n");
+		printf("scissors\n");
 	}
 	if((pc==2&&user==0)||(pc==0&&user==1)||(pc==1&&user==2)){ //check the winner
 		printf("I won!");
